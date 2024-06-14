@@ -1,11 +1,27 @@
 package com.distribuida.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
+@Component
+@Entity
+@Table(name = "localizaciones_dpto")
 
 public class Localizaciones_Dpto {
 
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    @Column(name = "id:localizacionesDpto")
 	private int id_localizacionesDpto;
+	 @Column(name = "numeroDpto")
 	private int numeroDpto;
+	 @Column(name = "id:ubicacioneDpto")
 	private String ubicacionDpto;
 	
 	public Localizaciones_Dpto() {}

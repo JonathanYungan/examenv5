@@ -2,14 +2,33 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
+
+@Component
+@Entity
+@Table(name = "subordinado")
 public class Subordinado {
 
-
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_subordinado")
 		private int id_subordinado;
+	@Column(name = "dniempleado")
 		private int dniEmpleado;
+	@Column(name = "nombreSubordinado")
 		private String nombreSubordinado;
+	@Column(name = "sexo")
 		private String sexo;
+	@Column(name = "fechanac")
 		private Date fechaNac;
+	@Column(name = "relacion")
 		private String relacion;
 		
 		public Subordinado() {}

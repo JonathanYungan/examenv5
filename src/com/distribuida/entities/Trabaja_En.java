@@ -1,9 +1,25 @@
 package com.distribuida.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
+
+@Component
+@Entity
+@Table(name = "trabaja_en")
 public class Trabaja_En {
-	
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    @Column(name = "id_trabajaEn")
 	private int id_trabajaEn;
+	 @Column(name = "numProv")
 	private int numProv;
+	 @Column(name = "horas")
 	private int horas;
 	
 	public Trabaja_En() {
