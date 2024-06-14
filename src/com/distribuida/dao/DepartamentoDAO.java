@@ -11,4 +11,4 @@ public interface DepartamentoDAO {
 			public void del(int id);
  
 	}
- 
+ /5
